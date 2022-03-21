@@ -1,14 +1,10 @@
 ---
 version: '3'
 services:
-  my-first-hello-world:
+  my-first-service:
     build:
-      context: ./folder
+      context: .
       dockerfile: Dockerfile
-    image: java-image
-
-  my-second-hello-world:
-    build:
-      context: ./folder
-      dockerfile: Dockerfile
-    image: java-image
+    image: my-first-image:v1
+    deploy:
+      replicas: 3
