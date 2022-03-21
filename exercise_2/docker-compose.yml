@@ -1,10 +1,8 @@
 ---
 version: '3'
 services:
-  my-first-service:
+  ...:
     build:
-      context: .
-      dockerfile: Dockerfile
-    image: my-first-image:v1
-    deploy:
-      replicas: 3
+      context: ...
+      dockerfile: ...
+    image: ...
