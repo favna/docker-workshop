@@ -1,4 +1,4 @@
-Exercise 1 - First Docker Container
+Exercise 1 - Your First Docker Container
 ---
 Steps:
 
