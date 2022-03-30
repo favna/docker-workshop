@@ -20,10 +20,10 @@ Steps:
 
 # C#
 
-1. Create a simple C# program (hello world).
-2. Create a [`Dockerfile`](Dockerfile) that uses the `mcr.microsoft.com/dotnet/core/runtime:3.1` base image.
+1. Create a simple C# program (hello world). (you can use `dotnet new console -o app -n myapp` to create a simple hello world application.)
+2. Create a [`Dockerfile`](Dockerfile) that uses the `mcr.microsoft.com/dotnet/runtime:6.0` base image.
 3. Publish the app using `dotnet publish -c Release`.
-4. Add the program to the custom image using `COPY`. Copy the `bin/Release/netcoreapp3.1/publish/` directory to the `app/` directory inside the image.
+4. Add the program to the custom image using `COPY`. Copy the `app/bin/Release/net6.0/publish/` directory to the `app/` directory inside the image.
 5. Create the `ENTRYPOINT` for the docker container, this entrypoint should be `dotnet <<app/<<YOUR_APP>>.dll`.
 6. Build the custom image using the `docker build` command (use the `-t` argument to give the image a name).
 7. Run the custom image using the `docker run` command.
