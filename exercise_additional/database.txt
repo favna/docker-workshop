@@ -1,0 +1,4 @@
+voorbeeld:
+
+INSERT INTO book(id, name)
+VALUES (1,'boek');
