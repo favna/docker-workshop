@@ -1,5 +1,6 @@
 Exercise 3 - Load Balancing
 ---
+---
 Steps:
 
 1. View the [app1](app1) directory. Run the container and see what it does.

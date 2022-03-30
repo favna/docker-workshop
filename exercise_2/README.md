@@ -1,5 +1,7 @@
 Exercise 2a - Docker-Compose
 ---
+---
+
 Steps:
 
 1. Add code to your java class so it will run indefinitely (using a loop for example), name it HelloWorldContinuous.java.
