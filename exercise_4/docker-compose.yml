@@ -1,33 +1,33 @@
-version: '2'
+version: '3.9'
 services:
-    web-app:
-        build:
-            context: .
-            dockerfile: Dockerfile
-        image: web-app
-        container_name: java-web-app
-        ports:
-          - 8090:9006
-        networks:
-          - web-app-net
-        environment:
-          - SPRING_DATASOURCE_URL=jdbc:postgresql://book-postgres:5432/bookdb
-        depends_on:
-          - postgres
+  web-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: web-app
+    container_name: java-web-app
+    ports:
+      - 8090:9006
+    networks:
+      - web-app-net
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://book-postgres:5432/bookdb
+    depends_on:
+      - postgres
 
-    postgres:
-        image: postgres:latest
-        container_name: book-postgres
-        ports:
-          - 25432:5432
-        networks:
-          - web-app-net
-        environment:
-          - POSTGRES_USER=dbuser
-          - POSTGRES_PASSWORD=db123
-          - POSTGRES_DB=bookdb
-        restart: unless-stopped
+  postgres:
+    image: postgres:latest
+    container_name: book-postgres
+    ports:
+      - 25432:5432
+    networks:
+      - web-app-net
+    environment:
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=db123
+      - POSTGRES_DB=bookdb
+    restart: unless-stopped
 
 networks:
-    web-app-net:
-        driver: "bridge"
+  web-app-net:
+    driver: 'bridge'
