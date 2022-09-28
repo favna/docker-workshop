@@ -1,10 +1,10 @@
-Exercise 3 - Load Balancing
----
----
+# Exercise 3 - Load Balancing
+
 Steps:
 
 1. View the [app1](app1) directory. Run the container and see what it does.
-2. Create a [docker-compose](docker-compose-net.yml) file that runs the container and exposes the internal port 80 to port 1001.
+2. Create a [docker-compose](docker-compose-net.yml) file that runs the container and exposes the internal port 80 to
+   port 1001.
 3. Check [localhost](https://localhost:1001) to verify the app is working.
 4. Stop the container.
 5. Create a second app, app2. This app should have a different front page, or [index.html](app1/web/index.html).
@@ -14,14 +14,17 @@ Steps:
 9. Finish the [Dockerfile](load-balancer/Dockerfile):
    1. Copy the [nginx.conf](load-balancer/nginx.conf) to the `/etc/nginx/nginx.conf` folder inside the container.
    2. Expose port 8080 to the outside world
-10. Create a loadbalancer in the [docker-compose](docker-compose-net.yml) file. Expose the loadbalancer port to port 3000.
+10. Create a loadbalancer in the [docker-compose](docker-compose-net.yml) file. Expose the loadbalancer port to
+    port 3000.
 11. Run the load balancer and verify it works as expected.
 
 Hint: use links to connect the two apps to the load balancer
 
 ```yaml
-    links:
-     - app1
-     - app2
+links:
+  - app1
+  - app2
 ```
-Example: [https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)
+
+Example:
+[https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)
