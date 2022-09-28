@@ -18,20 +18,16 @@ We are going to create a docker-compose file that sets up a network between the 
 
 ## Step 1: Creating a database container
 
-First we are going to create the postgres database service. The postgres database image is available at the Docker Hub,
-so we are going to make use of this one.
+First we are going to run the postgres database service. The postgres database image is available at the Docker Hub, so
+we are going to make use of this one.
 
-1. Create a [docker-compose.yml](docker-compose.yml).
-2. Create a service named `postgres`:
-   1. that uses the image `postgres:latest`. This image is publicly available from the
-      [docker hub](https://hub.docker.com/_/postgres).
-   2. that uses the container-name `book-postgres`. This image is publicly available from the
-      [docker hub](https://hub.docker.com/_/postgres).
-   3. Expose port 5432 (the default postgres port) to the outside port 25432.
-   4. Add the following `environment` variables:
-      - POSTGRES_USER=dbuser
-      - POSTGRES_PASSWORD=db123
-      - POSTGRES_DB=bookdb
+1. Start a new postgres Docker container using the `postgres` service in the [docker-compose.yml](docker-compose.yml)
+   file. Make sure to _only_ start the `postgres` service, _not_ the `web-app` service.
+2. The outside port of the postgres container that you just started is `25432`.
+3. The credentials for the postgres container are:
+   - Username: dbuser
+   - Password: db123
+   - Standard database: bookdb
 
 ## Step 2: Create the service for the web-app
 
@@ -46,18 +42,10 @@ so we are going to make use of this one.
    4. Expose port 9006 (the default postgres port) to the outside port 8090. (we can connect to the application using
       this outside port).
 
-## Step 3: Create a network
+## Step 3: Using a network
 
-We are going to create a network. After we have made this network we are going to add the two services we just created
-to this network. When two services are part of a single network, we can connect them in a very easy manner.
-
-add the following to the [docker-compose.yml](docker-compose.yml):
-
-```yaml
-networks:
-  web-app-net:
-    driver: 'bridge'
-```
+We are going to use a network. to this network. When two services are part of a single network, we can connect them in a
+very easy manner.
 
 We have added a 'bridge' type network to our docker-compose file. From the Docker documentation:
 
@@ -66,6 +54,9 @@ network to communicate, while providing isolation from containers which are not 
 
 So if we add containers to this network, they are allowed to communicate with each other, while still being isolated
 from the outside world.
+
+If a network is defined in the compose file it is automatically started when you first start a service in that compose
+file, you may have already noticed this when you started the postgres container.
 
 ## Step 4: Adding the database connection
 
@@ -93,12 +84,11 @@ Why does the SPRING_DATASOURCE_URL look like this?
          container_name: book-postgres
          ports:
             - '25432':'5432'
+         # ...
 
    # Adding the network here:
    networks:
       - web-app-net
-      ...
-      ...
    ```
 
 ## Step 6: Run and verify the application works
