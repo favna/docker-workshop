@@ -1,4 +1,3 @@
----
 version: '3'
 services:
   my-continuous-1:
