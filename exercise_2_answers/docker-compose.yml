@@ -7,10 +7,3 @@ services:
     image: my-continuous
     deploy:
       replicas: 3
-  # You can also add the second container like this:
-  #
-  # my-continuous-2:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   image: my-continuous
