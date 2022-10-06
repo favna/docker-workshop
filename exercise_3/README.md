@@ -5,7 +5,7 @@ Steps:
 1. View the [app1](app1) directory. Run the container and see what it does.
 2. Create a [docker-compose](docker-compose-net.yml) file that runs the container and exposes the internal port 80 to
    port 1001.
-3. Check [localhost](https://localhost:1001) to verify the app is working.
+3. Check [localhost](http://localhost:1001) to verify the app is working.
 4. Stop the container.
 5. Create a second app, app2. This app should have a different front page, or [index.html](app1/web/index.html).
 6. Add this app to the [docker-compose](docker-compose-net.yml) file and expose app2 to port 1002
