@@ -14,6 +14,14 @@ services:
       - 1002:80
     container_name: app2
 
+
+  app3:
+    build: app3
+    image: app3
+    ports:
+      - 1003:80
+    container_name: app3
+
   loadbalancer:
     build: load-balancer
     links:
