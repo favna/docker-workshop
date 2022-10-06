@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  funny-pwsh:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: funny-pwsh
+    tty: true
+    deploy:
+      replicas: 10
