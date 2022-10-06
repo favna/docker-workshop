@@ -24,9 +24,6 @@ services:
 
   loadbalancer:
     build: load-balancer
-    links:
-      - app1
-      - app2
     depends_on:
       - app1
       - app2
