@@ -2,115 +2,115 @@
 
 **For a full reference go to https://docs.docker.com/engine/reference/commandline/cli/**
 
-## `pull`
+## ```pull```
 
 _Download an image from a registry_
 
-**Ex:** `docker pull <image_name>
+**Ex:** ```docker pull <image_name>```
 
-## `build`
+## ```build```
 
 _Build an image from a Dockerfile_
 
-**Ex:** `docker build -t <image_name> .`
+**Ex:** ```docker build -t <image_name> .```
 
-## `rmi`
+## ```rmi```
 
 _Remove one or more images_
 
-**Ex:** `docker rmi <image_name>`
+**Ex:** ```docker rmi <image_name>```
 
-## `run`
+## ```run```
 
 _Run a command in a new container_
 
 **Ex:**
-`docker run --interactive --tty --rm --name <container_name> --publish <host_port>:<container_port> <image_name>`
+```docker run --interactive --tty --rm --name <container_name> --publish <host_port>:<container_port> <image_name>```
 
-- `--interactive` -> Keep STDIN open even if not attached
-- `--tty` -> Allocate a pseudo-TTY
-- `--name` -> Assign a name to the container
-- `--publish` -> Publish a container's port(s) to the host
-- `--rm` -> Automatically remove the container when it exits
+- ```--interactive``` -> Keep STDIN open even if not attached
+- ```--tty``` -> Allocate a pseudo-TTY
+- ```--name``` -> Assign a name to the container
+- ```--publish``` -> Publish a container's port(s) to the host
+- ```--rm``` -> Automatically remove the container when it exits
 
-## `exec`
+## ```exec```
 
 _Run a command in a running container_
 
-**Ex:** `docker exec -it <container_name> /bin/bash`
+**Ex:** ```docker exec -it <container_name> /bin/bash```
 
-## `stop`
+## ```stop```
 
 _Stop one or more running containers_
 
-**Ex:** `docker stop <container_name>`
+**Ex:** ```docker stop <container_name>```
 
-## `start`
+## ```start```
 
 _Start one or more stopped containers_
 
-**Ex:** `docker start <container_name>`
+**Ex:** ```docker start <container_name>```
 
-## `rm`
+## ```rm```
 
 _Remove one or more containers_
 
-**Ex:** `docker rm <container_name>`
+**Ex:** ```docker rm <container_name>```
 
-## `ps`
+## ```ps```
 
 _List containers_
 
-**Ex:** `docker ps`
+**Ex:** ```docker ps```
 
-## `images`
+## ```images```
 
 _List images_
 
-**Ex:** `docker images`
+**Ex:** ```docker images```
 
-## `logs`
+## ```logs```
 
 _Fetch the logs of a container_
 
-**Ex:** `docker logs <container_name>`
+**Ex:** ```docker logs <container_name>```
 
-## `help`
+## ```help```
 
 _Get help on a command_
 
-**Ex:** `docker help`
+**Ex:** ```docker help```
 
-## `attach`
+## ```attach```
 
 _Attach local standard input, output, and error streams to a running container_
 
-**Ex:** `docker attach <container_name>`
+**Ex:** ```docker attach <container_name>```
 
-## `ps`
+## ```ps```
 
 _List containers_
 
-**Ex:** `docker ps`
+**Ex:** ```docker ps```
 
-**Ex:** `docker ps --all`
+**Ex:** ```docker ps --all```
 
-- `--all` -> List all containers, including stopped ones
+- ```--all``` -> List all containers, including stopped ones
 
-## `container`
+## ```container```
 
 _Manage containers_
 
-**Ex:** `docker container ls`
+**Ex:** ```docker container ls```
 
-- Alias for `docker ps`
+- Alias for ```docker ps```
 
-**Ex:** `docker container rm`
+**Ex:** ```docker container rm```
 
-- Alias for `docker rm`
+- Alias for ```docker rm```
 
-## `kill`
+## ```kill```
 
 _Kill one or more running containers_
 
-**Ex:** `docker kill <container_name>`
+**Ex:** ```docker kill <container_name>```
