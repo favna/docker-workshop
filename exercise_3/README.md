@@ -1,6 +1,6 @@
-# Exercise 2
+# Exercise 3
 
-## Exercise 2a - Docker-Compose
+## Exercise 3a - Docker-Compose
 
 Steps:
 
@@ -21,7 +21,7 @@ Steps:
 7. When your [`docker-compose.yml`](docker-compose.yml) is finished, run the following command:
    `docker-compose -f docker-compose.yml up`.
 
-## Exercise 2b - Creating multiple instances
+## Exercise 3b - Creating multiple instances
 
 Steps:
 

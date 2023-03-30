@@ -1,4 +1,4 @@
-# Exercise 1 - Your First Docker Container
+# Exercise 2 - Your First Docker Container
 
 ## Java
 

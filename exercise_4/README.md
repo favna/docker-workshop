@@ -1,4 +1,4 @@
-# Exercise 3 - Load Balancing
+# Exercise 4 - Load Balancing
 
 Steps:
 

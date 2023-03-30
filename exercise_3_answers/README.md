@@ -1,4 +1,4 @@
-# Exercise 2a - Docker-Compose - Answers
+# Exercise 3a - Docker-Compose - Answers
 
 Commands :
 
