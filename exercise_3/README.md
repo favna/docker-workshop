@@ -1,30 +1,31 @@
-# Exercise 3 - Load Balancing
+# Exercise 2
+
+## Exercise 2a - Docker-Compose
 
 Steps:
 
-1. View the [app1](app1) directory. Run the container and see what it does.
-2. Create a [docker-compose](docker-compose-net.yml) file that runs the container and exposes the internal port 80 to
-   port 1001.
-3. Check [localhost](http://localhost:1001) to verify the app is working.
-4. Stop the container.
-5. Create a second app, app2. This app should have a different front page, or [index.html](app1/web/index.html).
-6. Add this app to the [docker-compose](docker-compose-net.yml) file and expose app2 to port 1002
-7. Verify that app2 is working by checking [localhost](https://localhost:1002).
-8. Look at the [nginx.conf](load-balancer/nginx.conf) file and try to understand what the file does.
-9. Finish the [Dockerfile](load-balancer/Dockerfile):
-   1. Copy the [nginx.conf](load-balancer/nginx.conf) to the `/etc/nginx/nginx.conf` folder inside the container.
-   2. Expose port 8080 to the outside world
-10. Create a loadbalancer in the [docker-compose](docker-compose-net.yml) file. Expose the loadbalancer port to
-    port 3000.
-11. Run the load balancer and verify it works as expected.
+1. Add code to your java class so it will run indefinitely (using a loop for example), name it
+   HelloWorldContinuous.java.
+2. Check the [`Dockerfile`](Dockerfile) to verify its correctness.
+3. Run the container to check if its functionality is what you expect of it.
+4. Open a second terminal and verify that you see the container running.
+5. Create a [`docker-compose.yml`](docker-compose.yml) file.
+6. Create a service in the docker-compose file, use the documentation from
+   [here](https://docs.docker.com/compose/compose-file/compose-file-v3/). We need to add the following items to the
+   [`docker-compose`](docker-compose.yml):
+   - service name (e.g. my-first-service)
+   - a build context (the directory which contains files/directories that have to be transferred inside the container,
+     and where the (if present) [`Dockerfile`](Dockerfile) is located.)
+   - dockerfile location (where is the Dockerfile located?)
+   - image name and tag (my-first-image:v1)
+7. When your [`docker-compose.yml`](docker-compose.yml) is finished, run the following command:
+   `docker-compose -f docker-compose.yml up`.
 
-Hint: use links to connect the two apps to the load balancer
+## Exercise 2b - Creating multiple instances
 
-```yaml
-links:
-  - app1
-  - app2
-```
+Steps:
 
-Example:
-[https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)
+1. Use the [`docker-compose.yml`](docker-compose.yml) from the previous exercise to create a second service
+   (my-second-service), using the same base image.
+2. Find out in the [documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/) how you could do this
+   in a different way (hint: replicas).

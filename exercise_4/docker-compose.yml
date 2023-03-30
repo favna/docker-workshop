@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  app1:
+    build: app1
+    image: app1
+    ports:
+      - 1001:80
+    container_name: app1

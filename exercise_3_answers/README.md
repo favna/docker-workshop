@@ -1,5 +1,6 @@
-# Exercise 3 - Load Balancing - Answers
+# Exercise 2a - Docker-Compose - Answers
 
-Commands:
+Commands :
 
-1. `docker-compose -f docker-compose-net.yml up`
+1. `docker-compose -f docker-compose.yml up`
+1. `docker-compose -f docker-compose.yml up --force-recreate`

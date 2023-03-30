@@ -1,6 +1,8 @@
-# Exercise 2a - Docker-Compose - Answers
+# Exercise 1 - Your First Docker Container - Answers
+
+## Java
 
 Commands :
 
-1. `docker-compose -f docker-compose.yml up`
-1. `docker-compose -f docker-compose.yml up --force-recreate`
+1. `docker build -t hello-world .`
+2. `docker run hello-world`

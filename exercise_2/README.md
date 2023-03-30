@@ -1,31 +1,17 @@
-# Exercise 2
+# Exercise 1 - Your First Docker Container
 
-## Exercise 2a - Docker-Compose
-
-Steps:
-
-1. Add code to your java class so it will run indefinitely (using a loop for example), name it
-   HelloWorldContinuous.java.
-2. Check the [`Dockerfile`](Dockerfile) to verify its correctness.
-3. Run the container to check if its functionality is what you expect of it.
-4. Open a second terminal and verify that you see the container running.
-5. Create a [`docker-compose.yml`](docker-compose.yml) file.
-6. Create a service in the docker-compose file, use the documentation from
-   [here](https://docs.docker.com/compose/compose-file/compose-file-v3/). We need to add the following items to the
-   [`docker-compose`](docker-compose.yml):
-   - service name (e.g. my-first-service)
-   - a build context (the directory which contains files/directories that have to be transferred inside the container,
-     and where the (if present) [`Dockerfile`](Dockerfile) is located.)
-   - dockerfile location (where is the Dockerfile located?)
-   - image name and tag (my-first-image:v1)
-7. When your [`docker-compose.yml`](docker-compose.yml) is finished, run the following command:
-   `docker-compose -f docker-compose.yml up`.
-
-## Exercise 2b - Creating multiple instances
+## Java
 
 Steps:
 
-1. Use the [`docker-compose.yml`](docker-compose.yml) from the previous exercise to create a second service
-   (my-second-service), using the same base image.
-2. Find out in the [documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/) how you could do this
-   in a different way (hint: replicas).
+1. Create a simple java program (hello world).
+2. Create a [`Dockerfile`](Dockerfile) that uses the `openjdk` base image.
+3. Add the java program to the custom image using `ADD`.
+4. Make sure the image compiles the java program before running it, using the `RUN` command.
+5. Create the `ENTRYPOINT` for the docker container, this entrypoint should be `java <<YOUR_JAVA_CLASS>>`.
+6. Build the custom image using the `docker build` command (use the `-t` argument to give the image a name).
+7. Run the custom image using the `docker run` command.
+8. Use the command `docker image ls -a` to check out your currently made image.
+9. Use the command `docker container ls` to check out your currently _running_ containers. What do(n't) you see, and
+   why?
+10. Use the command `docker container ls -a` to check out all your containers.

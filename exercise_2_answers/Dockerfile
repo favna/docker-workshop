@@ -1,7 +1,7 @@
 FROM openjdk
 
-ADD HelloWorldContinuous.java HelloWorldContinuous.java
+ADD HelloWorld.java HelloWorld.java
 
-RUN javac HelloWorldContinuous.java
+RUN javac HelloWorld.java
 
-ENTRYPOINT ["java", "HelloWorldContinuous"]
+ENTRYPOINT ["java", "HelloWorld"]
