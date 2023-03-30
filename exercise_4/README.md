@@ -14,14 +14,14 @@ Steps:
 9. Finish the [Dockerfile](load-balancer/Dockerfile):
    1. Copy the [nginx.conf](load-balancer/nginx.conf) to the `/etc/nginx/nginx.conf` folder inside the container.
    2. Expose port 8080 to the outside world
-10. Create a loadbalancer in the [docker-compose](docker-compose.yml) file. Expose the loadbalancer port to
-    port 3000.
-11. Run the load balancer and verify it works as expected.
+10. Create a loadbalancer in the [docker-compose](docker-compose.yml) file. Expose the loadbalancer port to port 3000.
+11. Run the load balancer and verify it works as expected. If it does then pressing F5 on localhost:3000 should show a
+    different front page each time.
 
-Hint: use links to connect the two apps to the load balancer
+Hint: use depends_on to ensure app1 and app2 are started before the load balancer is started
 
 ```yaml
-links:
+depends_on:
   - app1
   - app2
 ```
