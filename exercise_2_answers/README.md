@@ -1,8 +1,8 @@
-# Exercise 2 - Your First Docker Container - Answers
+# Exercise 2 - Your First Podman Container - Answers
 
 ## Java
 
 Commands :
 
-1. `docker build -t hello-world .`
-2. `docker run hello-world`
+1. `podman build -t hello-world .`
+2. `podman run hello-world`

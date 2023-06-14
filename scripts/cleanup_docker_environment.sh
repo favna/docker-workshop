@@ -2,6 +2,6 @@
 
 echo "-----------------------------"
 echo "cleaning all images and volumes"
-docker system prune --all --force --volumes
+podman system prune --all --force --volumes
 echo "done."
 echo "-----------------------------"
