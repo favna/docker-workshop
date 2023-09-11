@@ -1,6 +1,6 @@
 # Exercise 3
 
-## Exercise 3a - Docker Compose
+## Exercise 3a - Podman Compose
 
 Steps:
 

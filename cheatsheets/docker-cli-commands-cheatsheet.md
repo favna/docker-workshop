@@ -1,31 +1,31 @@
-# Docker CLI Commands Cheatsheet
+# Podman CLI Commands Cheatsheet
 
-**For a full reference go to https://docs.docker.com/engine/reference/commandline/cli/**
+**For a full reference go to https://docs.podman.io/en/latest/Commands.html (alternatively the Docker documentation: https://docs.docker.com/engine/reference/commandline/cli/)**
 
 ## ```pull```
 
 _Download an image from a registry_
 
-**Ex:** ```docker pull <image_name>```
+**Ex:** ```podman pull <image_name>```
 
 ## ```build```
 
 _Build an image from a Dockerfile_
 
-**Ex:** ```docker build -t <image_name> .```
+**Ex:** ```podman build -t <image_name> .```
 
 ## ```rmi```
 
 _Remove one or more images_
 
-**Ex:** ```docker rmi <image_name>```
+**Ex:** ```podman rmi <image_name>```
 
 ## ```run```
 
 _Run a command in a new container_
 
 **Ex:**
-```docker run --interactive --tty --rm --name <container_name> --publish <host_port>:<container_port> <image_name>```
+```podman run --interactive --tty --rm --name <container_name> --publish <host_port>:<container_port> <image_name>```
 
 - ```--interactive``` -> Keep STDIN open even if not attached
 - ```--tty``` -> Allocate a pseudo-TTY
@@ -37,63 +37,63 @@ _Run a command in a new container_
 
 _Run a command in a running container_
 
-**Ex:** ```docker exec -it <container_name> /bin/bash```
+**Ex:** ```podman exec -it <container_name> /bin/bash```
 
 ## ```stop```
 
 _Stop one or more running containers_
 
-**Ex:** ```docker stop <container_name>```
+**Ex:** ```podman stop <container_name>```
 
 ## ```start```
 
 _Start one or more stopped containers_
 
-**Ex:** ```docker start <container_name>```
+**Ex:** ```podman start <container_name>```
 
 ## ```rm```
 
 _Remove one or more containers_
 
-**Ex:** ```docker rm <container_name>```
+**Ex:** ```podman rm <container_name>```
 
 ## ```ps```
 
 _List containers_
 
-**Ex:** ```docker ps```
+**Ex:** ```podman ps```
 
 ## ```images```
 
 _List images_
 
-**Ex:** ```docker images```
+**Ex:** ```podman images```
 
 ## ```logs```
 
 _Fetch the logs of a container_
 
-**Ex:** ```docker logs <container_name>```
+**Ex:** ```podman logs <container_name>```
 
 ## ```help```
 
 _Get help on a command_
 
-**Ex:** ```docker help```
+**Ex:** ```podman help```
 
 ## ```attach```
 
 _Attach local standard input, output, and error streams to a running container_
 
-**Ex:** ```docker attach <container_name>```
+**Ex:** ```podman attach <container_name>```
 
 ## ```ps```
 
 _List containers_
 
-**Ex:** ```docker ps```
+**Ex:** ```podman ps```
 
-**Ex:** ```docker ps --all```
+**Ex:** ```podman ps --all```
 
 - ```--all``` -> List all containers, including stopped ones
 
@@ -101,16 +101,16 @@ _List containers_
 
 _Manage containers_
 
-**Ex:** ```docker container ls```
+**Ex:** ```podman container ls```
 
-- Alias for ```docker ps```
+- Alias for ```podman ps```
 
-**Ex:** ```docker container rm```
+**Ex:** ```podman container rm```
 
-- Alias for ```docker rm```
+- Alias for ```podman rm```
 
 ## ```kill```
 
 _Kill one or more running containers_
 
-**Ex:** ```docker kill <container_name>```
+**Ex:** ```podman kill <container_name>```
