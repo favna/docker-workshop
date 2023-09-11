@@ -3,21 +3,30 @@ services:
   app1:
     build: app1
     image: app1
+    networks:
+      - workshop
     ports:
-      - 1001:80
+      - 4001:80
     container_name: app1
 
   app2:
     build: app2
     image: app2
+    networks:
+      - workshop
     ports:
-      - 1002:80
+      - 4002:80
     container_name: app2
 
   loadbalancer:
     build: load-balancer
+    networks:
+      - workshop
     depends_on:
       - app1
       - app2
     ports:
       - 3000:8080
+
+networks:
+  workshop:

@@ -1,4 +1,4 @@
-# Use the standard Nginx image from Docker Hub
+# Use the standard Nginx image from Container Registry
 FROM nginx
 
 # copy the nginx.conf to /etc/nginx/nginx.conf

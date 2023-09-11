@@ -3,28 +3,23 @@
 Steps:
 
 1. View the [app1](app1) directory. Run the container and see what it does.
-2. Create a [docker-compose](docker-compose.yml) file that runs the container and exposes the internal port 80 to
-   port 1001.
-3. Check [localhost](http://localhost:1001) to verify the app is working.
+2. Create a [`docker-compose.yml`] file that runs the container and exposes the internal port 80 to port 4001.
+3. Check [localhost](http://localhost:4001) to verify the app is working.
 4. Stop the container.
 5. Create a second app, app2. This app should have a different front page, or [index.html](app1/web/index.html).
-6. Add this app to the [docker-compose](docker-compose.yml) file and expose app2 to port 1002
+6. Add this app to the [`docker-compose.yml`] file and expose app2 to port 1002
 7. Verify that app2 is working by checking [localhost](https://localhost:1002).
 8. Look at the [nginx.conf](load-balancer/nginx.conf) file and try to understand what the file does.
 9. Finish the [Dockerfile](load-balancer/Dockerfile):
    1. Copy the [nginx.conf](load-balancer/nginx.conf) to the `/etc/nginx/nginx.conf` folder inside the container.
    2. Expose port 8080 to the outside world
-10. Create a loadbalancer in the [docker-compose](docker-compose.yml) file. Expose the loadbalancer port to port 3000.
+10. Create a loadbalancer in the [`docker-compose.yml`] file. Expose the loadbalancer port to port 3000.
 11. Run the load balancer and verify it works as expected. If it does then pressing F5 on localhost:3000 should show a
     different front page each time.
 
-Hint: use depends_on to ensure app1 and app2 are started before the load balancer is started
-
-```yaml
-depends_on:
-  - app1
-  - app2
-```
+	@@ -28,3 +27,5 @@ depends_on:
 
 Example:
 [https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)
+
+[`docker-compose.yml`]: ./docker-compose.yml

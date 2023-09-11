@@ -3,6 +3,11 @@ services:
   app1:
     build: app1
     image: app1
+    networks:
+      - workshop
     ports:
-      - 1001:80
+      - 4001:80
     container_name: app1
+
+networks:
+  workshop:

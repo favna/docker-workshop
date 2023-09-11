@@ -2,4 +2,4 @@
 
 Commands:
 
-1. `docker-compose -f docker-compose-net.yml up`
+1. `docker-compose up`
