@@ -1,6 +1,6 @@
-# Exercise 3
+# Exercise 2
 
-## Exercise 3a - Docker Compose
+## Exercise 2a - Docker Compose
 
 Steps:
 
@@ -20,7 +20,7 @@ Steps:
    - image name and tag (`my-first-image:v1`)
 7. When your [`docker-compose.yml`] is finished, run the following command: `docker-compose up`.
 
-## Exercise 3b - Creating multiple instances
+## Exercise 2b - Creating multiple instances
 
 Steps:
 
