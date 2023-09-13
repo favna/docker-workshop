@@ -1,3 +1,4 @@
+.vagrant/
 .yarn/*
 !.yarn/cache
 !.yarn/patches
