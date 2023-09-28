@@ -22,7 +22,7 @@
   - Oracle VirtualBox (https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe)
   - Vagrant (https://releases.hashicorp.com/vagrant/2.3.7/vagrant_2.3.7_windows_amd64.msi)
 - After installing and rebooting, open up de `cmd` of Windows (Command Prompt) or the Powershell.
-- Navigate to the rootdir of this project and run:
+- Navigate to the rootdir of this project (where `Vagrantfile` is located) and run:
   - `vagrant up`
 - After the installation of the vagrant image:
   - `vagrant ssh`
