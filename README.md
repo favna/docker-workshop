@@ -2,7 +2,7 @@
 
 ## Network
 
-- Please use IWNET while you are doing the exercise, because of EWNET's firewall 🔥
+- Please use IWNET while you are doing the exercises, because of EWNET's firewall 🔥
 
 ## Presentation
 
