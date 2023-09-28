@@ -1,5 +1,9 @@
 # Containerization workshop
 
+## Network
+
+- Please use IWNET while you are doing the exercise, because of EWNET's firewall 🔥
+
 ## Presentation
 
 - [Graduate Class October 2023](containerization.pptx)
