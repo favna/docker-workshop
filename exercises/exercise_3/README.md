@@ -17,7 +17,7 @@ Steps:
 11. Run the load balancer and verify it works as expected. If it does then pressing F5 on localhost:3000 should show a
     different front page each time.
 
-	@@ -28,3 +27,5 @@ depends_on:
+    @@ -28,3 +27,5 @@ depends_on:
 
 Example:
 [https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)

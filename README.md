@@ -30,5 +30,5 @@
   - `vagrant up`
 - After the installation of the vagrant image:
   - `vagrant ssh`
-- Congratulations! You're running a VM with a nice bash environment with `docker` installed on it!
-  You can find the contents of this project in the `~/workshop` folder.
+- Congratulations! You're running a VM with a nice bash environment with `docker` installed on it! You can find the
+  contents of this project in the `~/workshop` folder.
