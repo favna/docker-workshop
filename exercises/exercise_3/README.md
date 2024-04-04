@@ -3,6 +3,7 @@
 Steps:
 
 1. View the [app1](app1) directory. Run the container and see what it does.
+    - When running this container make sure to add `--publish 8080:80` to the `docker run` command. For example `docker run --publish 8080:80 <your image name>`
 2. Create a [`docker-compose.yml`] file that runs the container and exposes the internal port 80 to port 4001.
 3. Check [localhost](http://localhost:4001) to verify the app is working.
 4. Stop the container.
