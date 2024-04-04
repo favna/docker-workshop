@@ -10,17 +10,17 @@
 
 ## Exercises
 
-- [Exercise 2 - Your First Docker Container](exercise_1/README.md)
-- [Exercise 3 - Docker Compose](exercise_2/README.md)
-- [Exercise 4 - Load Balancing](exercise_3/README.md)
+- [Exercise 1 - Your First Docker Container](./exercises/exercise_1/README.md)
+- [Exercise 2 - Docker Compose](./exercises/exercise_2/README.md)
+- [Exercise 3 - Load Balancing](./exercises/exercise_3/README.md)
 
 ## Answers
 
-- [Exercise 2 - Your First Docker Container](exercise_1_answers/README.md)
-- [Exercise 3 - Docker Compose](exercise_2_answers/README.md)
-- [Exercise 4 - Load Balancing](exercise_3_answers/README.md)
+- [Exercise 1 - Your First Docker Container](./exercises/exercise_1_answers/README.md)
+- [Exercise 2 - Docker Compose](./exercises/exercise_2_answers/README.md)
+- [Exercise 3 - Load Balancing](./exercises/exercise_3_answers/README.md)
 
-## Vagrantfile
+## Optional: Vagrantfile
 
 - First download and install these binaries in this order:
   - Oracle VirtualBox (https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe)
