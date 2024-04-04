@@ -6,7 +6,7 @@
 
 ## Presentation
 
-- [Graduate Class October 2023](containerization.pptx)
+- [Containerization PowerPoint](containerization.pptx)
 
 ## Exercises
 
