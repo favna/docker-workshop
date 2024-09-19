@@ -23,8 +23,8 @@
 ## Optional: Vagrantfile
 
 - First download and install these binaries in this order:
-  - Oracle VirtualBox (https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe)
-  - Vagrant (https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_windows_amd64.msi)
+  - Oracle VirtualBox (https://download.virtualbox.org/virtualbox/7.1.0/VirtualBox-7.1.0-164728-Win.exe)
+  - Vagrant (https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_windows_i686.msi)
 - After installing and rebooting, open up `cmd` of Windows (Command Prompt) or the Powershell.
 - Navigate to the rootdir of this project (where `Vagrantfile` is located) and run:
   - `vagrant up`
