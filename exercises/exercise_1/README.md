@@ -5,7 +5,7 @@
 Steps:
 
 1. Create a simple java program (hello world).
-2. Create a [`Dockerfile`](Dockerfile) that uses the `openjdk` base image.
+2. Create a [`Dockerfile`](Dockerfile) that uses the `eclipse-temurin` base image.
 3. Add the java program to the custom image using `ADD`.
 4. Make sure the image compiles the java program before running it, using the `RUN` command.
 5. Create the `ENTRYPOINT` for the docker container, this entrypoint should be `java <<YOUR_JAVA_CLASS>>`.

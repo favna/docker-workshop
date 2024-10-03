@@ -1,6 +1,6 @@
-FROM openjdk
+FROM eclipse-temurin:17
 
-ADD HelloWorldContinuous.java HelloWorldContinuous.java
+COPY HelloWorldContinuous.java HelloWorldContinuous.java
 
 RUN javac HelloWorldContinuous.java
 

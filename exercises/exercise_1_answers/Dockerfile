@@ -1,6 +1,6 @@
-FROM openjdk
+FROM eclipse-temurin:17
 
-ADD HelloWorld.java HelloWorld.java
+COPY HelloWorld.java HelloWorld.java
 
 RUN javac HelloWorld.java
 
