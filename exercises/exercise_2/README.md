@@ -11,7 +11,7 @@ Steps:
 4. Open a second terminal and verify that you see the container running.
 5. Create a [`docker-compose.yml`] file.
 6. Create a service in the [`docker-compose.yml`] file, use the documentation from
-   [here](https://docs.docker.com/compose/compose-file/compose-file-v3/). We need to add the following items to the
+   [here](https://docs.docker.com/reference/compose-file/). We need to add the following items to the
    [`docker-compose.yml`]:
    - service name (e.g. `my-first-service`)
    - a build context (the directory which contains files/directories that have to be transferred inside the container,
@@ -26,7 +26,7 @@ Steps:
 
 1. Use the [`docker-compose.yml`] from the previous exercise to create a second service (my-second-service), using the
    same base image.
-2. Find out in the [documentation](https://docs.docker.com/compose/compose-file/compose-file-v3/) how you could do this
+2. Find out in the [documentation](https://docs.docker.com/reference/compose-file/deploy) how you could do this
    in a different way (hint: replicas).
 
 [`Dockerfile`]: ./Dockerfile
