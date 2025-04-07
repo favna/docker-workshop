@@ -1,5 +1,6 @@
 services:
   cgi-zscaler:
     image: cgi-zscaler:latest
+    build: .
     container_name: cgi-zscaler
     restart: never
