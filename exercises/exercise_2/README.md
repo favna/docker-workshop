@@ -26,8 +26,8 @@ Steps:
 
 1. Use the [`docker-compose.yml`] from the previous exercise to create a second service (my-second-service), using the
    same base image.
-2. Find out in the [documentation](https://docs.docker.com/reference/compose-file/deploy) how you could do this
-   in a different way (hint: replicas).
+2. Find out in the [documentation](https://docs.docker.com/reference/compose-file/deploy) how you could do this in a
+   different way (hint: replicas).
 
 [`Dockerfile`]: ./Dockerfile
 [`docker-compose.yml`]: ./docker-compose.yml
