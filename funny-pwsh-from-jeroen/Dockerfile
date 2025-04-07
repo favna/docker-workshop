@@ -1,10 +1,13 @@
 FROM debian:latest
 
+COPY --from=cgi-zscaler:latest /ca-certs/ZscalerRootCertificate-2048-SHA256.crt /ca-certs/ZscalerRootCertificate-2048-SHA256.crt
+RUN bash -c 'cp /ca-certs/ZscalerRootCertificate-2048-SHA256.crt $(openssl version -d | cut -f2 -d \")/certs && update-ca-certificates'
+
 RUN apt update  && apt install -y curl gnupg apt-transport-https
 
-RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+RUN bash -c "curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -"
 
-RUN sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-bullseye-prod bullseye main" > /etc/apt/sources.list.d/microsoft.list'
+RUN bash -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-bullseye-prod bullseye main" > /etc/apt/sources.list.d/microsoft.list'
 
 RUN apt update && apt install -y powershell
 
