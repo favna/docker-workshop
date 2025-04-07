@@ -1,2 +1,4 @@
 # Shell files should have LF line endings
 *.sh text eol=lf
+
+cgi-zscaler/ZscalerRootCertificate-2048-SHA256.crt filter=crypt diff=crypt merge=crypt
