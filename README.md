@@ -6,7 +6,7 @@
 
 ## Presentation
 
-- [Containerization PowerPoint](containerization.pptx)
+~- [Containerization PowerPoint](containerization.pptx)~ moved to internal repository
 
 ## Exercises
 
