@@ -7,3 +7,7 @@
 !.yarn/sdks
 !.yarn/versions
 ~$*.pptx
+~$*.ppt
+*.iml
+.idea/
+
