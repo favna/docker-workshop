@@ -10,8 +10,8 @@ Steps:
 3. Check [localhost](http://localhost:4001) to verify the app is working.
 4. Stop the container.
 5. Create a second app, app2. This app should have a different front page, or [index.html](app1/web/index.html).
-6. Add this app to the [`docker-compose.yml`] file and expose app2 to port 1002
-7. Verify that app2 is working by checking [localhost](http://localhost:1002).
+6. Add this app to the [`docker-compose.yml`] file and expose app2 to port 4002
+7. Verify that app2 is working by checking [localhost](http://localhost:4002).
 8. Look at the [nginx.conf](load-balancer/nginx.conf) file and try to understand what the file does.
 9. Finish the [Dockerfile](load-balancer/Dockerfile):
    1. Copy the [nginx.conf](load-balancer/nginx.conf) to the `/etc/nginx/nginx.conf` folder inside the container.
