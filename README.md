@@ -23,10 +23,6 @@ Installation instructions can be found here:
 
 So you can use your favorite IDE to edit the files in Windows, and run the Docker CLI in Ubuntu.
 
-```bash
-ln -s derp derp
-```
-
 ## Exercises
 
 - [Exercise 1 - Your First Docker Container](./exercises/exercise_1/README.md)
